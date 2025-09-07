@@ -1,0 +1,139 @@
+/*
+    File: style.css
+    Description: All styles for the HR Management System. Includes multiple theme palettes.
+*/
+
+/* --- Original Theme Variables --- */
+:root[data-theme="original-light"] {
+    --header-sidebar: #2C3E50;
+    --nav-tab: #95A5A6;
+    --nav-tab-active: #E74C3C;
+    --card-bg: #ECF0F1;
+    --primary-button: #E74C3C;
+    --text-primary: #2C3E50;
+    --text-secondary: #34495E;
+    --background-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --border-color: #dce4e8;
+    /* ... other original variables ... */
+}
+
+:root[data-theme="original-dark"] {
+    --header-sidebar: #1a252f;
+    --card-bg: #2c3e50;
+    --text-primary: #ecf0f1;
+    --text-secondary: #bdc3c7;
+    --background-color: #1a1a2e;
+    --surface-color: #16213e;
+    --border-color: #2d3748;
+    /* ... other original variables ... */
+}
+
+
+/* --- New Professional Blue Theme (Default) --- */
+:root, :root[data-theme="professional-blue-light"] {
+    --header-sidebar: #1D2C3F;       /* Deep Slate Blue */
+    --primary-button: #007BFF;      /* Vibrant Blue */
+    --nav-tab-active: #007BFF;       /* Vibrant Blue */
+    --text-primary: #1D2C3F;         /* Deep Slate Blue */
+    --text-secondary: #5a6a7e;
+    --success-color: #28A745;       /* Success Green */
+    --danger-color: #DC3545;        /* Danger Red */
+    --warning-color: #FFC107;       /* Warning Amber */
+    --info-color: #17A2B8;
+    --background-color: #F8F9FA;
+    --surface-color: #FFFFFF;
+    --border-color: #dee2e6;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --sidebar-width: 280px;
+    --sidebar-collapsed-width: 80px;
+    --header-height: 70px;
+}
+
+:root[data-theme="professional-blue-dark"] {
+    --header-sidebar: #16212E;
+    --primary-button: #007BFF;
+    --nav-tab-active: #007BFF;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --success-color: #28A745;
+    --danger-color: #DC3545;
+    --warning-color: #FFC107;
+    --info-color: #17A2B8;
+    --background-color: #111821;
+    --surface-color: #1D2C3F;
+    --border-color: #344459;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* --- New Modern Teal Theme --- */
+:root[data-theme="modern-teal-light"] {
+    --header-sidebar: #212529;      /* Graphite Black */
+    --primary-button: #17A2B8;      /* Info Teal */
+    --nav-tab-active: #D81B60;      /* Vibrant Magenta */
+    --text-primary: #212529;        /* Graphite Black */
+    --text-secondary: #6c757d;
+    --success-color: #198754;       /* Forest Green */
+    --danger-color: #DC3545;
+    --warning-color: #FD7E14;       /* Vibrant Orange */
+    --info-color: #0dcaf0;
+    --background-color: #F9F9F9;
+    --surface-color: #FFFFFF;
+    --border-color: #e9ecef;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+:root[data-theme="modern-teal-dark"] {
+    --header-sidebar: #16181a;
+    --primary-button: #17A2B8;
+    --nav-tab-active: #D81B60;
+    --text-primary: #f8f9fa;
+    --text-secondary: #ced4da;
+    --success-color: #198754;
+    --danger-color: #DC3545;
+    --warning-color: #FD7E14;
+    --info-color: #0dcaf0;
+    --background-color: #121212;
+    --surface-color: #212529;
+    --border-color: #495057;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+/* --- Global and Element Styles --- */
+/* ... (The rest of the CSS from the original file goes here) ... */
+/* ... (It will work perfectly with the new theme variables) ... */
+
+/* New styles for theme switcher in settings */
+.theme-switcher {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.theme-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.theme-button:hover {
+    border-color: var(--primary-button);
+    color: var(--primary-button);
+}
+
+.theme-button.active {
+    background-color: var(--primary-button);
+    color: white;
+    border-color: var(--primary-button);
+}

@@ -1,0 +1,15 @@
+HR-Prosh-System/
+├── index.html
+├── style.css
+├── assets/
+│   ├── logo.png
+│   └── (your other favicon files)
+├── db/
+│   └── DB.xlsx
+└── js/
+    ├── main.js         // Main application entry point
+    ├── ui.js           // Handles DOM updates and UI interactions
+    ├── data.js         // Manages all employee data operations
+    ├── auth.js         // Handles authentication logic
+    ├── theme.js        // Manages theme switching
+    └── config.js       // Stores application configuration
